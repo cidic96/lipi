@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> लिपि | Lipi </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="./manifest.json">
+
+  <link href="https://fonts.googleapis.com/css?family=Caveat|Homemade+Apple|Liu+Jian+Mao+Cao|Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+  <main class="form-container">
+    <h1 style="margin-bottom: 7px;">Lipi | लिपि </h1>
+    <h2>A scribe for your handwritten assignments.</h2>
+    <br/><br/>
+    <section>
+      <form id="generate-image-form">
+        <div class="row responsive-row">
+          <div class="col">
+            <label for="handwriting-font">Handwriting Font</label>
+            <select id="handwriting-font">
+              <option default
+                style="font-family: 'Homemade Apple'" 
+                value="'Homemade Apple', cursive"
+              >Homemade Apple</option>
+              <option 
+                style="font-family: 'Caveat', cursive; font-size: 13pt;" 
+                value="'Caveat', cursive"
+              >Caveat</option>
+              <option 
+                style="font-family: 'Liu Jian Mao Cao'; font-size: 13pt;" 
+                value="'Liu Jian Mao Cao', cursive"
+              >Liu Jian Mao Cao (支持汉字)</option>
+              <option 
+                style="font-family: 'Gloria Hallelujah'; font-size: 13pt;" 
+                value="'Gloria Hallelujah', cursive"
+              >Gloria Hallelujah</option>
+            </select>
+          </div>
+          <div style="padding: 30px 20px;">or</div>
+          <div class="col">
+            <label for="font-file">Upload your handwriting font <small>(Beta) (<a href="#how-to-add-handwriting">Guide to create font from your handwriting</a>)</small></label>
+            <input type="file" id="font-file" />
+            <br>
+          </div>
+        </div>
+        
+        <label for="ink-color">Pen Ink Color</label>
+        <select id="ink-color">
+          <option default value="#000F55">Blue</option>
+          <option value="#333">Black</option>
+        </select><br>
+
+        <div class="row responsive-row">
+
+          <div class="col">
+            <label for="font-size">Font Size</label><br>
+            <input type="number" min="0" value="12" id="font-size" />&nbsp; pt
+            <br><br>
+          </div>
+
+          <div class="col">
+            <label for="top-padding">Vertical position of text</label><br>
+            <input type="number" min="0" value="0" id="top-padding" />&nbsp; px
+            <br><br>
+          </div>
+
+          <div class="col">
+            <label for="word-spacing">Word Spacing</label><br>
+            <input type="number" min="0" value="3" id="word-spacing" />&nbsp; px
+            <br><br>
+          </div>
+
+        </div>
+        <div class="row responsive-row">
+
+          <div class="col">
+            <label for="letter-spacing">Letter Spacing</label><br>
+            <input type="number" value="0" id="letter-spacing" />&nbsp; pt
+            <br><br>
+          </div>
+
+          <div class="col">
+            <label for="paper-margin-toggle">Paper Margin</label>
+            <label class="switch-toggle outer">
+              <input id="paper-margin-toggle" type="checkbox" />
+              <div></div>
+            </label>
+            <br><br>
+          </div>
+
+          <div class="col">
+            <label for="paper-line-toggle">Paper Lines</label>
+            <label role="checkbox" class="switch-toggle outer">
+              <input id="paper-line-toggle" checked type="checkbox" />
+              <div></div>
+            </label>
+            <br /><br />
+          </div>
+
+          <div class="col">
+            <label for="paper-curve-toggle">Paper Curvature</label>
+            <label class="switch-toggle outer">
+              <input id="paper-curve-toggle" type="checkbox" />
+              <div></div>
+            </label>
+          </div>
+          
+        </div>
+        <br/>
+        <button type="button" class="secondary-button" id="draw-diagram-button">Draw Diagram <small>(Beta)</small></button><br/><br/>
+        <button type="submit" class="primary-button" class="generate-image">Generate Image</button> 
+        <button type="button" class="secondary-button" id="pdf-preview-button">Download as PDF <span style="background-color: #ccc;padding: 5px; color: #000;border-radius: 10px;font-size: 7pt;"><span id="image-count">0</span> Pages</span></button>
+        <br/><br/>
+      </form>
+
+      <!-- Editor -->
+      <div class="row output-grid responsive-row">
+        <div class="col">
+          <div class="page">
+            <div class="paper-margin-top-line" contenteditable="true">
+            </div>
+            <div class="textarea row">
+              <div class="paper-margin-left-line"></div>
+              <div role="textbox" class="paper-content" id="note" contenteditable="true">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus dui eget tortor feugiat iaculis. Morbi et dolor in felis viverra efficitur. Integer id laoreet arcu. Mauris turpis nibh, scelerisque sed tristique non, hendrerit in erat. Duis interdum nisl risus, ac ultrices ipsum auctor at. Aliquam faucibus iaculis metus sit amet tincidunt. Vestibulum cursus urna vel nunc imperdiet suscipit. Ut eu augue egestas, porta orci lobortis, pharetra orci. Morbi eu tellus quis nisi tempor accumsan nec eu urna.
+    
+                empor, ullamcorper tortor. Mauris quis fermentum augue. Phasellus ac nisl hendrerit, fringilla enim aliquam, placerat odio. Ut tortor nisi, pellentesque sed nisi at, hendrerit imperdiet turpis. Proin interdum porttitor metus at hendrerit. Proin ipsum nisl, lacinia vitae purus ullamcorper, maximus convallis sem. Sed nec lacinia lorem. Duis arcu metus, cursus non odio quis, tincidunt tempor augue. Donec eget vestibulum risus. Nullam blandit quis est vitae feugiat.
+              </div>
+            </div>
+            <div class="overlay"></div>
+          </div>
+        </div>
+        <div class="col output-container">
+          <div id="output" class="output"></div>
+          <div style="text-align: center;padding-top: 20px;">
+            <a class="blue-button download-button disabled hide-mobile">Download Image</a>
+          </div>
+        </div>
+      </div>
+      <br/><a class="blue-button download-button disabled hide-pc">Download Image</a> <br/>
+    </section>
+
+    <section class="guide" id="how-to-add-handwriting">
+      <h2>✨ How to add your own handwriting?</h2>
+      <ul>
+        <li>To use your handwriting, you will have to generate font of your handwriting.</li>
+        <li>There are websites like <a href="https://www.calligraphr.com/en/">Calligraphr</a> that let you do that.</li>
+        <li>Once you get .ttf file of your handwriting, upload it from upload button and boom! you will have your handwriting in the image.</li>
+      </ul>
+    </section>
+
+  </main>
+  <img id="warped-image" />
+  <footer style="font-family: 'Lato', sans-serif;
+font-size: 0.625em;
+line-height: 1.7em;
+color: #586169;
+text-align: center;
+padding-bottom:20px;
+">
+      <h3>Scripted with love by <a href="http://siddhant.site/" rel="nofollow designer">Siddhant</a>.<br></h3>
+      <a href="https://www.linkedin.com/in/singhsiddhant" style="color:rgb(29,161,219);border:0px" target="_blank"><img src="https://i.imgur.com/iaKtSRZ.png" style="border:none;width:20px;height:20px;max-width:20px;max-height:20px" class="CToWUd" width="20" height="20"></a>&nbsp;&nbsp;
+                
+                <a href="http://twitter.com/siddhantsings" style="color:rgb(29,161,219);border:0px" target="_blank"><img src="https://i.imgur.com/2YRIuZr.png" style="border:none;width:20px;height:20px;max-width:20px;max-height:20px" class="CToWUd" width="20" height="20"></a>&nbsp;&nbsp;
+                
+                <a href="http://instagram.com/siddhantsings" style="color:rgb(29,161,219);border:0px" target="_blank"><img src="https://i.imgur.com/L1xJP61.png" style="border:none;width:20px;height:20px;max-width:20px;max-height:20px" class="CToWUd" width="20" height="20">
+              </a>
+    
+  </footer>
+
+  <!-- Fixed Elements -->
+  <section class="draw-container popup-container">
+    <button class="close-button">&times;</button>
+    <div class="row responsive-row">
+      <canvas id="diagram-canvas" style="background-color: #fff;" height="300px" width="600px"></canvas>
+      <div class="col buttons-container">
+        <button class="blue-button" id="add-to-paper-button">Add to Paper</button>
+        <button class="blue-button" id="draw-download-button">Download Image</button>
+        <br/><br/>
+        <button id="clear-draw-canvas" class="blue-button" style="background-color: #f30;">Clear Canvas</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="pdf-preview-container popup-container">
+    <button class="close-button">&times;</button>
+    <div class="row responsive-row">
+      <div class="preview-holder">
+        <div class="preview-image image-1">
+          <button class="close-image">&times;</button>
+          <img src="images/apple-touch-icon.png">
+        </div>
+      </div>
+      <div class="col buttons-container">
+        <button id="generate-pdf" class="blue-button">Download PDF</button>
+      </div>
+    </div>
+  </section>
+  <script defer src="./lib/html2canvas.min.js" crossorigin="anonymous"></script>
+  <script defer src="./js/app.mjs" type="module" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/jspdf@^1/dist/jspdf.min.js"></script>
+</body>
+</html>
