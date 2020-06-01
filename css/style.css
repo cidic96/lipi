@@ -50,7 +50,6 @@ html, body {
 .form-container input,
 .form-container select {
   display: block;
-  width: 100%;
   background-color: var(--color-background);
   border: none;
   border: 1px solid #ddd;
