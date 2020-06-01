@@ -37,9 +37,23 @@ html, body {
 }
 
 .form-container {
-  padding: 60px 130px;
+  margin: auto !important;
+  margin-top: 30px !important;
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+  padding: 7.5% 7.5%;
   font-family: 'Source Sans Pro', sans-serif;
-  overflow-y: hidden;
+    width: 65%;
+    border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      margin: 0px 0px 10px 0px;
+      border: 1px solid #ffa486;
+      padding: 20px;
+      background: #fffe;
+      box-shadow: inset 0px 0px 15px #fff;
+      -moz-box-shadow: inset 0px 0px 15px #fff;
+      -webkit-box-shadow: inset 0px 0px 15px #fff;
 }
 
 .form-container label {
@@ -92,6 +106,7 @@ html, body {
   margin: 0px 8px 0px 0px;
   transform: rotateZ(0deg);
   width: 500px;
+  max-width: 90%;
   display: inline-block;
   height: 600px;
   box-sizing: border-box;
