@@ -7,17 +7,17 @@
 
 html, body {
   margin: 0px;
-  width: 100%;
+  width: 110%;
   overflow-x: hidden;
   background: #E0EAFC;  /* fallback for old browsers */
-  /* background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg");
-  */ background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg");
+  /* background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   scroll-behavior: smooth;
-  /* height: 120%; /* You must set a specified height */
-  /* background-position: center; /* Center the image */
-  /* background-repeat: no-repeat; /* Do not repeat the image */
-  /* background-size: cover; /* Resize the background image to cover the entire container */
+  height: 120%; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 
 }
 
